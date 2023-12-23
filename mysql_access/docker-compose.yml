@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mysql
+    container_name: db_testespring
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - testespring:/var/lib/mysql
+
+volumes:
+  testespring:
